@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+body{
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  font-family: "poppins", sans-serif;
+  color: #333;
+ animation: smoothscroll 1s ease-in-out;
+ overflow-x: hidden;
+ & p{
+  font-weight: 300;
+ }
+ }
+
+@keyframes fadeIn {
+  /* Animation for fading in elements */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  /* Animation for sliding in elements */
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  /* Animation for sliding in elements from the right */  
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+@keyframes smoothscroll {
+  /* Animation for smooth scrolling */
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+  
+}
