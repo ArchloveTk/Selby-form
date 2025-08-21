@@ -56,9 +56,12 @@ function Careers() {
       data.append("passportCopy", formData.passportCopy);
       data.append("passportPhoto", formData.passportPhoto);
       data.append("drivingLicense", formData.drivingLicense);
+
+      // Use your Render URL
+const API_URL = "https://submit-form-oeof.onrender.com";
   
       try {
-        const res = await fetch("http://localhost:5000/send-email", {
+        const res = await fetch('${API_URL}/send-email', {
           method: "POST",
           body: data
         });

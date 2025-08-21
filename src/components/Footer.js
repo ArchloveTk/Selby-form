@@ -19,8 +19,8 @@ function Footer() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_2sxijse','template_xp9j7r9', form.current, {
-        publicKey: 'WfDh8TBEW2qtSDAmZ',
+    .sendForm('service_w230y3j','template_hziocal', form.current, {
+      publicKey: 'WfDh8TBEW2qtSDAmZ',
       })
       .then(
           () => {
@@ -58,7 +58,7 @@ function Footer() {
                 <label> <LocalPhoneOutlinedIcon /> +971 55 949 0637 </label>
                  </Link>
                  <a 
-                   href="https://wa.me/971585660767" 
+                   href="https://wa.me/971559490637" 
                    target="_blank" 
                     rel="noopener noreferrer"
                     >
@@ -78,10 +78,10 @@ function Footer() {
        </div>
 
         <div className='socialIcons' >
-        <Link> <WhatsAppIcon/> </Link>
-        <Link> <InstagramIcon/> </Link>
-        <Link><FacebookIcon/> </Link>
-        <Link> <LinkedInIcon/> </Link>
+        <a href='https://wa.me/971585660767'> <WhatsAppIcon/> </a>
+        <Link to='https://instagram.com/selbyambersourcing' > <InstagramIcon/> </Link>
+        <Link to='https://www.facebook.com/selbyambersourcing' ><FacebookIcon/> </Link>
+        <Link to='https://www.linkedin.com/company/sasg-selby-amber-sourcing/posts/?feedView=all' > <LinkedInIcon/> </Link>
         
       </div>
         </div>
@@ -89,7 +89,7 @@ function Footer() {
         
       <div className='copyright' >
         <p>© 2024 Selby Amber Sourcing. All rights reserved.</p>
-<p>Designed by <a href='https://www.linkedin.com/in/selby-amber-sourcing-1b2b4a1b0/' target='_blank' rel='noreferrer'>A.Tech</a></p>
+<p>Designed by <a href='https://arclovetech.pages.dev/' target='_blank' rel='noreferrer'>A.Tech</a></p>
     
     </div>
    
