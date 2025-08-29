@@ -65,7 +65,7 @@ function Footer() {
                   <WhatsAppIcon className='whatsapp' />
                   <label>+971 55 949 0637</label>
                   </a>
-                 <Link to="mailto:info@selbyambersourcing.global"   ><label><MailOutlineOutlinedIcon  />info@selbyambersourcing.global</label></Link>
+                 <Link to="mailto:info@selbyambersourcing.com"   ><label><MailOutlineOutlinedIcon  />info@selbyambersourcing.com</label></Link>
       </div>
       <div className='Socials' >
         <h2> Join to our Newsletter</h2>
@@ -78,7 +78,7 @@ function Footer() {
        </div>
 
         <div className='socialIcons' >
-        <a href='https://wa.me/971585660767'> <WhatsAppIcon/> </a>
+        <a href="https://wa.me/971559490637" > <WhatsAppIcon/> </a>
         <Link to='https://instagram.com/selbyambersourcing' > <InstagramIcon/> </Link>
         <Link to='https://www.facebook.com/selbyambersourcing' ><FacebookIcon/> </Link>
         <Link to='https://www.linkedin.com/company/sasg-selby-amber-sourcing/posts/?feedView=all' > <LinkedInIcon/> </Link>

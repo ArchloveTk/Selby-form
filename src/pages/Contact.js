@@ -66,7 +66,7 @@ function Contact() {
 
                 <div className='SocialNetCon' >
                 <a 
-                   href="https://wa.me/971585660767" 
+                   href="https://wa.me/971559490637" 
                     target="_blank" 
                    rel="noopener noreferrer"
                   >
@@ -78,7 +78,7 @@ function Contact() {
 
             
                 <div className='SocialNetCon' >
-                   <Link to="mailto:info@selbyambersourcing.global" >
+                   <Link to="mailto:info@selbyambersourcing.com" >
                     <fieldset>
                      <MailOutlineOutlinedIcon/>
                   <label>info@selbyambersourcing.com</label>

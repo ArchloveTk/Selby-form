@@ -680,9 +680,9 @@ margin-bottom: 20vh;
   }
 }
 .FindJobContent img {
-  width: 100%;
+  width: 80%;
   position: relative;
-  left: 20%;
+  left: 10%;
  
 }
 
@@ -1185,6 +1185,17 @@ fieldset{
 .job-image {
   border-radius: 100%;
   width: 8%;
+  position: relative;
+  left: 20%;
+  box-shadow: #555 5px 5px 20px;
+
+}
+
+.job-imageS{
+  border-radius: 100%;
+  width: 9%;
+  position: relative;
+  left: 20%;
   box-shadow: #555 5px 5px 20px;
 
 }
@@ -1201,7 +1212,7 @@ fieldset{
   background: linear-gradient(to right, #0a0a23,#4FCDDA);
 }
 .custom-form {
-  max-width: 500px;
+  max-width: 600px;
   margin: 40px auto;
   padding: 25px;
   border: 1px solid #ddd;
@@ -1664,12 +1675,15 @@ fieldset{
         flex-direction: column;
         text-align: left;
         position: absolute;
-        right: 0px;
+        right: 3px;
+        top: 85px;
         background-color: #0a0a23;
-        width: 60vh;
+        width: 44vh;
         padding: 14px 16px;
         z-index: 999;
         font-size: 1.5rem;
+        transition: all 0.3s ease;
+        scale: (0.9);
     
         & .call {
             position: relative;
@@ -2319,6 +2333,31 @@ color: #f8f8f8;
   left: 5%;
   margin-top: 20px;
   }
+}
+
+.JobFlag{
+  gap: 10px;
+   position: relative;
+   left: 10%;
+}
+.careers-title p{
+ text-align: center;
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+
+.job-image {
+  border-radius: 100%;
+  width: 10%;
+  box-shadow: #555 5px 5px 20px;
+
+}
+.careers-title h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0a0a23;
+  margin-top: 20px;
 }
 /* Tablet */
 

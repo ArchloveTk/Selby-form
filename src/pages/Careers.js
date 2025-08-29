@@ -32,6 +32,9 @@ function Careers() {
       drivingLicense: null
     });
   
+    const [loading, setLoading] = useState(false); // loading state
+
+
     const handleChange = (e) => {
       const { name, value, files } = e.target;
       if (files) {
@@ -43,6 +46,10 @@ function Careers() {
   
     const handleSubmit = async (e) => {
       e.preventDefault();
+
+      if (loading) return; // 
+
+      setLoading(true);
   
       const data = new FormData();
       data.append("name", formData.name);
@@ -61,7 +68,7 @@ function Careers() {
 const API_URL = "https://submit-form-oeof.onrender.com";
   
       try {
-        const res = await fetch('${API_URL}/send-email', {
+        const res = await fetch('https://submit-form-oeof.onrender.com/send-email', {
           method: "POST",
           body: data
         });
@@ -71,7 +78,9 @@ const API_URL = "https://submit-form-oeof.onrender.com";
       } catch (err) {
         alert("Failed to send. Please try again.");
         console.error(err);
-      }
+      } finally {
+      setLoading(false); // ✅ re-enable after response
+    }
     };
 
     const mabasa =[
@@ -124,7 +133,7 @@ const API_URL = "https://submit-form-oeof.onrender.com";
 <div className="careers-title">
 <div className="JobFlag">
         <img src={Germany} alt="Bus Driver" className="job-image" />
-        <img src={Slovakia} alt="Food Production" className="job-image" />
+        <img src={Slovakia} alt="Food Production" className="job-imageS" />
         <img src=""/>
         <img src={Czech} alt="Warehouse" className="job-image" />
         <img src={Estonia} alt="Delivery" className="job-image" />
@@ -201,16 +210,18 @@ const API_URL = "https://submit-form-oeof.onrender.com";
         <input name="email" type="email" placeholder="Email" required onChange={handleChange} />
         <input name="phone" type="tel" placeholder="Phone Number" required onChange={handleChange} />
       
-        <select name="countryB" type="text" required onChange={handleChange} className="country" >
+        <select name="countryB" type="text"  onChange={handleChange} className="country" >
           <option value="">Select Country(Basic Package)</option>
           <option value="Czech republic">Czech Republic </option>
+          <option value="Croatia">Croatia </option>
           <option value="Slovakia">Slovakia</option>
-          <option value="Estonia ">Estonia </option>
+          
         </select> <br/>
 
         <select name="country" type="text" onChange={handleChange} className="country" >
           <option value="">Select Country(Premium package)</option>
           <option value="Germany ">Germany </option>
+          <option value="Estonia ">Estonia </option>
           
         </select> <br/>
 
@@ -224,15 +235,27 @@ const API_URL = "https://submit-form-oeof.onrender.com";
           <option value="Other">Other</option>
         </select> <br/>
 
+
+
         <textarea name="message" placeholder="Additional Information (optional)" onChange={handleChange} />
         <br/>
+
+        <p className="form-note">Note: All files should be in PDF or image format.</p>
         <label>Passport Photo:</label>
-        <input name="passportPhoto" type="file" accept="image/*" required onChange={handleChange} />
+        <input name="passportPhoto" type="file" accept="image/*,.pdf" required onChange={handleChange} />
         <label>Passport Copy:</label>
-        <input name="passportCopy" type="file" accept="image/*" required onChange={handleChange} />
+        <input name="passportCopy" type="file" accept="image/*,.pdf" required onChange={handleChange} />
         <label>International Driving License:</label>
-        <input name="drivingLicense" type="file" accept="image/*,.pdf" required onChange={handleChange} />
-        <button type="submit">Send</button>
+        <input name="drivingLicense" type="file" accept="image/*,.pdf"  onChange={handleChange} />
+        <button type="submit">  {loading ? "Submitting..." : "Send"} </button>
+
+        {loading && (
+        <p style={{ color: "blue", marginTop: "10px" }}>
+          ⏳ Please wait... we are processing your submission.
+        </p>
+      )}
+
+     
         
       </form>
 
